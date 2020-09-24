@@ -24,33 +24,48 @@ namespace _2_lab_encryption
         {
             if (radioButtonPlayfair.Checked == true)
             {
-                ICipher userData = new PlayfairCipher();
-                textBoxOutput.Text = userData.Encode(textBoxInput.Text, textBoxKeyword.Text);
-
-                if (textBoxKeyword.Text == string.Empty)
-                    MessageBox.Show("There is no keyword in input string. Keyword set to default value.", "Warning!");
+                if (textBoxKeyword.Text != string.Empty)
+                {
+                    ICipher userData = new PlayfairCipher();
+                    textBoxOutput.Text = userData.Encode(textBoxInput.Text, textBoxKeyword.Text);
+                }
+                else
+                    MessageBox.Show("There is no keyword in input string. Enter keyword.", "Warning!");
             }
             else if (radioButtonVigenere.Checked == true)
             {
-                ICipher userData = new VigenereCipher();
-                textBoxOutput.Text = userData.Encode(textBoxInput.Text, textBoxKeyword.Text);
-
-                if (textBoxKeyword.Text == string.Empty)
-                    MessageBox.Show("There is no keyword in input string. Keyword set to default value.", "Warning!");
+                if (textBoxKeyword.Text != string.Empty)
+                {
+                    ICipher userData = new VigenereCipher();
+                    textBoxOutput.Text = userData.Encode(textBoxInput.Text, textBoxKeyword.Text);
+                }
+                else
+                    MessageBox.Show("There is no keyword in input string. Enter keyword", "Warning!");
             }
         }
 
         private void buttonDecrypt_Click(object sender, EventArgs e)
         {
+            
             if (radioButtonPlayfair.Checked == true)
             {
-                ICipher userData = new PlayfairCipher();
-                textBoxOutput.Text = userData.Decode(textBoxInput.Text, textBoxKeyword.Text);
+                if (textBoxKeyword.Text != string.Empty)
+                {
+                    ICipher userData = new PlayfairCipher();
+                    textBoxOutput.Text = userData.Decode(textBoxInput.Text, textBoxKeyword.Text);
+                }
+                else
+                    MessageBox.Show("There is no keyword in input string. Enter keyword.", "Warning!");
             }
             else if (radioButtonVigenere.Checked == true)
             {
-                ICipher userData = new VigenereCipher();
-                textBoxOutput.Text = userData.Decode(textBoxInput.Text, textBoxKeyword.Text);
+                if (textBoxKeyword.Text != string.Empty)
+                {
+                    ICipher userData = new VigenereCipher();
+                    textBoxOutput.Text = userData.Decode(textBoxInput.Text, textBoxKeyword.Text);
+                }
+                else
+                    MessageBox.Show("There is no keyword in input string. Enter keyword.", "Warning!");
             }
         }
 
@@ -66,11 +81,24 @@ namespace _2_lab_encryption
 
         private void buttonSaveFile_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Saving output data", "Notification");
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 fileName = sfd.FileName;
                 File.WriteAllText(fileName, textBoxOutput.Text);
             }
+
+            MessageBox.Show("Saving input data", "Notitfication");
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                fileName = sfd.FileName;
+                File.WriteAllText(fileName, textBoxInput.Text);
+            }
+        }
+
+        private void aboutProgramToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Program developed by Krupsky Artemy, student of 484 gr.\nThe program encrypt/decrypt text.", "About program");
         }
     }
 }

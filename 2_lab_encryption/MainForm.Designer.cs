@@ -43,14 +43,17 @@
             this.buttonSaveFile = new System.Windows.Forms.Button();
             this.ofd = new System.Windows.Forms.OpenFileDialog();
             this.sfd = new System.Windows.Forms.SaveFileDialog();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.aboutProgramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label1.Location = new System.Drawing.Point(15, 9);
+            this.label1.Location = new System.Drawing.Point(12, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 17);
             this.label1.TabIndex = 0;
@@ -60,7 +63,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label2.Location = new System.Drawing.Point(455, 9);
+            this.label2.Location = new System.Drawing.Point(452, 30);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 17);
             this.label2.TabIndex = 1;
@@ -68,7 +71,7 @@
             // 
             // textBoxInput
             // 
-            this.textBoxInput.Location = new System.Drawing.Point(18, 29);
+            this.textBoxInput.Location = new System.Drawing.Point(15, 50);
             this.textBoxInput.Multiline = true;
             this.textBoxInput.Name = "textBoxInput";
             this.textBoxInput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -77,7 +80,7 @@
             // 
             // textBoxOutput
             // 
-            this.textBoxOutput.Location = new System.Drawing.Point(458, 29);
+            this.textBoxOutput.Location = new System.Drawing.Point(455, 50);
             this.textBoxOutput.Multiline = true;
             this.textBoxOutput.Name = "textBoxOutput";
             this.textBoxOutput.ReadOnly = true;
@@ -88,7 +91,7 @@
             // buttonEncrypt
             // 
             this.buttonEncrypt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.buttonEncrypt.Location = new System.Drawing.Point(250, 29);
+            this.buttonEncrypt.Location = new System.Drawing.Point(247, 50);
             this.buttonEncrypt.Name = "buttonEncrypt";
             this.buttonEncrypt.Size = new System.Drawing.Size(202, 40);
             this.buttonEncrypt.TabIndex = 4;
@@ -99,7 +102,7 @@
             // buttonDecrypt
             // 
             this.buttonDecrypt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.buttonDecrypt.Location = new System.Drawing.Point(250, 75);
+            this.buttonDecrypt.Location = new System.Drawing.Point(247, 96);
             this.buttonDecrypt.Name = "buttonDecrypt";
             this.buttonDecrypt.Size = new System.Drawing.Size(202, 40);
             this.buttonDecrypt.TabIndex = 5;
@@ -112,7 +115,7 @@
             this.groupBox1.Controls.Add(this.radioButtonVigenere);
             this.groupBox1.Controls.Add(this.radioButtonPlayfair);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox1.Location = new System.Drawing.Point(250, 121);
+            this.groupBox1.Location = new System.Drawing.Point(247, 142);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(202, 68);
             this.groupBox1.TabIndex = 6;
@@ -144,7 +147,7 @@
             // textBoxKeyword
             // 
             this.textBoxKeyword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBoxKeyword.Location = new System.Drawing.Point(250, 212);
+            this.textBoxKeyword.Location = new System.Drawing.Point(247, 233);
             this.textBoxKeyword.Name = "textBoxKeyword";
             this.textBoxKeyword.Size = new System.Drawing.Size(202, 23);
             this.textBoxKeyword.TabIndex = 7;
@@ -153,7 +156,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label3.Location = new System.Drawing.Point(247, 192);
+            this.label3.Location = new System.Drawing.Point(244, 213);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 17);
             this.label3.TabIndex = 8;
@@ -162,7 +165,7 @@
             // buttonOpenFile
             // 
             this.buttonOpenFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.buttonOpenFile.Location = new System.Drawing.Point(250, 241);
+            this.buttonOpenFile.Location = new System.Drawing.Point(247, 262);
             this.buttonOpenFile.Name = "buttonOpenFile";
             this.buttonOpenFile.Size = new System.Drawing.Size(98, 31);
             this.buttonOpenFile.TabIndex = 9;
@@ -173,7 +176,7 @@
             // buttonSaveFile
             // 
             this.buttonSaveFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.buttonSaveFile.Location = new System.Drawing.Point(354, 241);
+            this.buttonSaveFile.Location = new System.Drawing.Point(351, 262);
             this.buttonSaveFile.Name = "buttonSaveFile";
             this.buttonSaveFile.Size = new System.Drawing.Size(98, 31);
             this.buttonSaveFile.TabIndex = 10;
@@ -185,11 +188,28 @@
             // 
             this.ofd.FileName = "openFileDialog1";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutProgramToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(693, 24);
+            this.menuStrip1.TabIndex = 11;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // aboutProgramToolStripMenuItem
+            // 
+            this.aboutProgramToolStripMenuItem.Name = "aboutProgramToolStripMenuItem";
+            this.aboutProgramToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
+            this.aboutProgramToolStripMenuItem.Text = "About program";
+            this.aboutProgramToolStripMenuItem.Click += new System.EventHandler(this.aboutProgramToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(701, 282);
+            this.ClientSize = new System.Drawing.Size(693, 296);
             this.Controls.Add(this.buttonSaveFile);
             this.Controls.Add(this.buttonOpenFile);
             this.Controls.Add(this.label3);
@@ -201,10 +221,14 @@
             this.Controls.Add(this.textBoxInput);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.Text = "2_lab";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -227,6 +251,8 @@
         private System.Windows.Forms.Button buttonSaveFile;
         private System.Windows.Forms.OpenFileDialog ofd;
         private System.Windows.Forms.SaveFileDialog sfd;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem aboutProgramToolStripMenuItem;
     }
 }
 
