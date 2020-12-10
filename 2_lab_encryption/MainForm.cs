@@ -98,7 +98,7 @@ namespace _2_lab_encryption
 
         private void aboutProgramToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Program developed by Krupsky Artemy, student of 484 gr.\nThe program encrypt/decrypt text.", "About program");
+            MessageBox.Show("Program developed by Krupsky Artemy, student of 484 gr.\nThe program encrypt/decrypt text.\nWorks only with latin alphabet", "About program");
         }
     }
 }

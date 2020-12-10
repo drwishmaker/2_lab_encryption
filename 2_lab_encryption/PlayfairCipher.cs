@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _2_lab_encryption
 {
-    class PlayfairCipher : ICipher
+    public class PlayfairCipher : ICipher
     {
 		private static int Mod(int a, int b)
 		{
@@ -37,15 +37,23 @@ namespace _2_lab_encryption
 		private static char[,] GenerateKeySquare(string key)
 		{
 			char[,] keySquare = new char[5, 5];
-			string defaultKeySquare = "ABCDEFGHIKLMNOPQRSTUVWXYZ";
-			string tempKey = string.IsNullOrEmpty(key) ? "CIPHER" : key.ToUpper();
+			string defaultAlphabet = "ABCDEFGHIKLMNOPQRSTUVWXYZ";
+
+			string tempKey;
+
+			if (string.IsNullOrEmpty(key))
+			{
+				throw new Exception("Enter keyword.");
+			}
+			else
+				tempKey = key.ToUpper();
 
 			tempKey = tempKey.Replace("J", "");
-			tempKey += defaultKeySquare;
+			tempKey += defaultAlphabet;
 
 			for (int i = 0; i < 25; ++i)
 			{
-				List<int> indexes = FindAllOccurrences(tempKey, defaultKeySquare[i]);
+				List<int> indexes = FindAllOccurrences(tempKey, defaultAlphabet[i]);
 				tempKey = RemoveAllDuplicates(tempKey, indexes);
 			}
 
